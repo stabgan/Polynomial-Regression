@@ -6,12 +6,12 @@ Comparing linear vs. polynomial regression on a salary dataset — implemented i
 
 This project fits a degree-4 polynomial regression model to a small dataset of job positions and salaries (10 data points). It compares the fit against a simple linear regression to demonstrate how polynomial features capture non-linear relationships.
 
-The dataset (`Position_Salaries.csv`) maps job levels 1–10 to salaries ranging from 45k to 1M, which follow an exponential-like curve — a good candidate for polynomial fitting.
+The dataset (`Position_Salaries.csv`) maps job levels 1-10 to salaries ranging from 45k to 1M, which follow an exponential-like curve, a good candidate for polynomial fitting.
 
 ### Mathematical Model
 
 ```
-y = b₀ + b₁x + b₂x² + b₃x³ + b₄x⁴
+y = b0 + b1*x + b2*x^2 + b3*x^3 + b4*x^4
 ```
 
 ## Methodology
@@ -24,15 +24,7 @@ y = b₀ + b₁x + b₂x² + b₃x³ + b₄x⁴
 
 ## Dataset
 
-`Position_Salaries.csv` — 10 rows mapping job titles and levels to salaries:
-
-| Position | Level | Salary |
-|---|---|---|
-| Business Analyst | 1 | 45,000 |
-| ... | ... | ... |
-| CEO | 10 | 1,000,000 |
-
-Only the `Level` and `Salary` columns are used as features and target.
+`Position_Salaries.csv` contains 10 rows mapping job titles and levels to salaries. Only the `Level` and `Salary` columns are used as features and target.
 
 ## Files
 
@@ -46,12 +38,12 @@ Only the `Level` and `Salary` columns are used as features and target.
 
 | | Technology | Purpose |
 |---|---|---|
-| 🐍 | Python 3.x | Primary implementation |
-| 📊 | scikit-learn | Linear & polynomial regression |
-| 📈 | matplotlib | Plotting |
-| 🐼 | pandas / numpy | Data loading & manipulation |
-| 📉 | R 3.x+ | Alternative implementation |
-| 🎨 | ggplot2 | R visualization |
+| :snake: | Python 3.x | Primary implementation |
+| :bar_chart: | scikit-learn | Linear and polynomial regression |
+| :chart_with_upwards_trend: | matplotlib | Plotting |
+| :panda_face: | pandas / numpy | Data loading and manipulation |
+| :chart_with_downwards_trend: | R 3.x+ | Alternative implementation |
+| :art: | ggplot2 | R visualization |
 
 ## Dependencies
 
@@ -82,8 +74,7 @@ Both scripts display three plots (linear fit, polynomial fit, smooth polynomial 
 ## Known Issues
 
 - **No train/test split:** Both implementations train and evaluate on the full dataset (split code is commented out). Fine for demonstration, but there is no out-of-sample validation.
-- **Hardcoded file path:** Both scripts assume `Position_Salaries.csv` is in the current working directory.
-- **Small dataset:** Only 10 data points — a degree-4 polynomial on this data is for illustration, not production use.
+- **Small dataset:** Only 10 data points. A degree-4 polynomial on this data is for illustration, not production use.
 
 ## License
 
